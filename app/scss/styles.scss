@@ -1,0 +1,244 @@
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,700,900';
+
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    font: 15px/1.5 'Raleway', sans-serif;
+    min-height: 100%;
+    height: 100%;
+}
+.c-wrap{
+    height: 100%;
+    position: relative;
+}
+
+.c-sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    padding: 20px;
+    
+    background: $primary-color;
+    background-image: linear-gradient(to bottom, rgb(155, 38, 175) 1%, rgb(71, 31, 241) 100%);
+    background-image: -moz-linear-gradient(top, rgb(155, 38, 175) 1%, rgb(71, 31, 241) 100%);
+    background-image: -webkit-linear-gradient(top, rgb(155, 38, 175) 1%, rgb(71, 31, 241) 100%);
+    background-image: -o-linear-gradient(top, rgb(155, 38, 175) 1%, rgb(71, 31, 241) 100%);
+    background-image: -ms-linear-gradient(top, rgb(155, 38, 175) 1%, rgb(71, 31, 241) 100%);
+    color: $light-text;
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.c-contact_info{
+    &__item{
+        margin-bottom: 15px;
+    }
+    &__title{
+        font-weight: bold;
+    }
+}
+
+.c-main{
+    margin-left: 350px;
+    position: relative;
+}
+
+.headline{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.c-summary{
+    position: relative;
+    left: -130px;
+    top: 30px;
+    margin-bottom: 70px;
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+    &__desc{
+        margin-left: 50px;
+    }
+    h1{
+        font-size: 35px;
+        line-height: 1.1;
+        margin: 25px 0;
+    }
+    &__position{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    &__btns{
+        margin-top: 55px;
+    }
+}
+
+.c-portrait{
+    width: 300px;
+    @extend .s-shadow;
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $light-text;
+    background: $primary-color;
+    padding: 15px 25px;
+    border-radius: 35px;
+    margin-right: 15px;
+    
+    letter-spacing: 5px;
+}
+
+.c-portfolio{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.c-work{
+    flex-basis: 50%;
+    height: 250px;
+    background: $primary-color no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.c-cards{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: wrap;
+}
+
+.c-card{
+    @extend .s-shadow;
+    padding: 35px 20px;
+    flex-basis: 40%;
+    margin-right: 20px;
+    &__title{
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &__name{
+        text-transform: uppercase;
+    }
+}
+
+.c-work{
+    text-decoration: none;
+    color: $dark-text;
+    background: #fff no-repeat 50% 50%;
+    background-size: cover;
+    
+    &:hover{
+        .c-work__desc{
+            opacity: 1;
+        }  
+    }
+    
+    &__desc{
+        background: rgba(255, 255, 255, 0.81);
+        width: 100%;
+        height: 100%;
+        
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        
+        opacity: 0;
+    }
+
+    &__title{
+        
+    }
+}
+
+.c-skills__wrap{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.c-skillbar{
+    position:relative;
+    display:block;
+    margin-bottom:15px;
+    flex-basis: 40%;
+    margin-right: 20px;
+    background:#eee;
+    height:35px;
+    &__title{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 110px;
+        font-weight: bold;
+        font-size: 13px;
+        color: #ffffff;
+        background: #471ff1;
+        span{
+            display:block;
+            background:rgba(0, 0, 0, 0.1);
+            padding:0 20px;
+            height:35px;
+            line-height:35px;
+        }
+    }
+    &__bar{
+        height: 35px;
+        width: 0px;
+        background: #471ff1;
+    }
+    &__percent{
+        position:absolute;
+        right:10px;
+        top:0;
+        font-size:11px;
+        height:35px;
+        line-height:35px;
+        color:#ffffff;
+        color:rgba(0, 0, 0, 0.4);
+    }
+}
